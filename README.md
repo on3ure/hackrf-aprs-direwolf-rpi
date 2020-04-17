@@ -7,6 +7,7 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
 
 ### Install on Linux - Raspberry PI Zero ... Buster Release (2020) ###
 
+## Install SoapySDR ##
 	cd ~
 	git clone https://www.github.com/wb2osz/direwolf
 	cd direwolf
