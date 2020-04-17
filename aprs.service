@@ -1,0 +1,17 @@
+[Unit]
+Description=APRS iGate
+Requires=network.target
+After=network.target
+StartLimitInterval=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+SyslogIdentifier=aprs
+WorkingDirectory=/aprs
+ExecStartPre=/usr/bin/tvservice -o
+ExecStart=/bin/bash /aprs/aprs.sh
+
+[Install]
+WantedBy=multi-user.target

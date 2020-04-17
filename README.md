@@ -9,79 +9,90 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
 
 ## Install Dependancies ##
 ```console
-  sudo apt -y update
-  sudo apt -y upgrade
-  sudo apt -y install libasound2-dev libhackrf-dev libhackrf0 hackrf cmake swig git
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install libasound2-dev libhackrf-dev libhackrf0 hackrf cmake swig git conspy
 ```
 
 ## Install SoapySDR ##
 ```console
-  cd ~
-  git clone https://github.com/pothosware/SoapySDR.git
-  cd SoapySDR
-  mkdir build
-  cd build
-  cmake ..
-  make 
-  sudo make install
-  sudo ldconfig
-  SoapySDRUtil --info
+cd ~
+git clone https://github.com/pothosware/SoapySDR.git
+cd SoapySDR
+mkdir build
+cd build
+cmake ..
+make 
+sudo make install
+sudo ldconfig
+SoapySDRUtil --info
 ```
 
 ## Install SoapyHackRF ##
 ```console
-  cd ~
-  git clone https://github.com/pothosware/SoapyHackRF.git
-  cd SoapyHackRF
-  mkdir build
-  cd build
-  cmake ..
-  make
-  sudo make install
-  sudo SoapySDRUtil --probe="driver=hackrf"
+cd ~
+git clone https://github.com/pothosware/SoapyHackRF.git
+cd SoapyHackRF
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo SoapySDRUtil --probe="driver=hackrf"
 ```
 
 ## Install rx_tools ##
 ```console
-  cd ~
-  git clone https://github.com/rxseger/rx_tools.git
-  cd rx_tools
-  mkdir build
-  cd build
-  cmake ..
-  make
-  sudo make install
+cd ~
+git clone https://github.com/rxseger/rx_tools.git
+cd rx_tools
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
 ```
 
 ## Install Dire Wolf ##
 ```console
-  cd ~
-  git clone https://www.github.com/wb2osz/direwolf
-  cd direwolf
-  make
-  sudo make install
+cd ~
+git clone https://www.github.com/wb2osz/direwolf
+cd direwolf
+make
+sudo make install
 ```
 
 ## Install start scripts ##
 ```console
-  cd ~
-  git clone https://github.com/on3ure/hackrf-aprs-direwolf-rpi-zero.git
-  sudo mkdir -p /aprs
-  sudo cp sdr-1200bps.conf /aprs
-  sudo cp aprs.sh /aprs
+cd ~
+git clone https://github.com/on3ure/hackrf-aprs-direwolf-rpi-zero.git
+cd hackrf-aprs-direwolf-rpi-zero
+sudo mkdir -p /aprs
+sudo cp sdr-1200bps.conf /aprs
+sudo cp aprs.sh /aprs
+sudo cp aprs.service /lib/systemd/system/
+
+sudo systemctl --system daemon-reload
+
+systemctl enable aprs
+systemctl start aprs
 ```
 
 ## Disable bluetooth and wifi ##
 ```console
-  echo "dtoverlay=pi3-disable-wifi" | sudo tee -a /boot/config.txt
-  echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
-  sudo systemctl disable hciuart
-  reboot
+echo "dtoverlay=pi3-disable-wifi" | sudo tee -a /boot/config.txt
+echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
+sudo systemctl disable hciuart
+reboot
 ```
 
-## Notes
+## Console ##
+You can monitor the aprs console via
+```console
+conspy 3
+```
+Press 3 times ESC to exit
 
-You can monitor the console via
-
+## Notes ##
 Edit aprs.sh .... i use a transverter ... so 28.800 is the transverted frequencie for 144.800, is you want
 to do this directly on a 2m receive antenna ... change this !
