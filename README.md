@@ -97,3 +97,7 @@ Press 3 times ESC to exit
 
 ## Notes ##
 No transverter ... change the 28.800 frequency to 144.800 (or whatever your local aprs frequency is) in aprs.sh
+
+## Colors ##
+If you want different colors ... there is a patch in the repository [direwolf-dev-color.patch](https://github.com/on3ure/hackrf-aprs-direwolf-rpi-zero/blob/master/direwolf-dev-color.patch) !
+This patch is against the development tree of Dire Wolf.
