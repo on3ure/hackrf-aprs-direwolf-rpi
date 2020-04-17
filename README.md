@@ -74,8 +74,8 @@ sudo cp aprs.service /lib/systemd/system/
 
 sudo systemctl --system daemon-reload
 
-systemctl enable aprs
-systemctl start aprs
+sudo sytemctl enable aprs
+sudo systemctl start aprs
 ```
 
 ## Disable bluetooth and wifi ##
