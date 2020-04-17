@@ -96,4 +96,4 @@ conspy 3
 Press 3 times ESC to exit
 
 ## Notes ##
-No trasnverter ... change the 28.800 frequency to 144.800 (or whatever your local aprs frequency is) in aprs.sh
+No transverter ... change the 28.800 frequency to 144.800 (or whatever your local aprs frequency is) in aprs.sh
