@@ -8,11 +8,14 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
 ### Install on Linux - Raspberry PI Zero ... Buster Release (2020) ###
 
 ## Install Dependancies ##
+```console
   sudo apt -y update
   sudo apt -y upgrade
   sudo apt -y install libasound2-dev libhackrf-dev libhackrf0 hackrf cmake swig git
+```
 
 ## Install SoapySDR ##
+```console
   cd ~
   git clone https://github.com/pothosware/SoapySDR.git
   cd SoapySDR
@@ -23,8 +26,10 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
   sudo make install
   sudo ldconfig
   SoapySDRUtil --info
+```
 
 ## Install SoapyHackRF ##
+```console
   cd ~
   git clone https://github.com/pothosware/SoapyHackRF.git
   cd SoapyHackRF
@@ -34,8 +39,10 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
   make
   sudo make install
   sudo SoapySDRUtil --probe="driver=hackrf"
+```
 
 ## Install rx_tools ##
+```console
   cd ~
   git clone https://github.com/rxseger/rx_tools.git
   cd rx_tools
@@ -44,26 +51,33 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
   cmake ..
   make
   sudo make install
+```
 
 ## Install Dire Wolf ##
+```console
   cd ~
   git clone https://www.github.com/wb2osz/direwolf
   cd direwolf
   make
   sudo make install
+```
 
 ## Install start scripts ##
+```console
   cd ~
   git clone git@github.com:on3ure/hackrf-aprs-direwolf-rpi-zero.git
   sudo mkdir -p /aprs
   sudo cp sdr-1200bps.conf /aprs
   sudo cp aprs.sh /aprs
+```
 
 ## Disable bluetooth and wifi ##
+```console
   echo "dtoverlay=pi3-disable-wifi" | sudo tee -a /boot/config.txt
   echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
   sudo systemctl disable hciuart
   reboot
+```
 
 ## Notes
 
