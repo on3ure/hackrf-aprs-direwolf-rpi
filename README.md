@@ -65,7 +65,7 @@ one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/ha
 ## Install start scripts ##
 ```console
   cd ~
-  git clone git@github.com:on3ure/hackrf-aprs-direwolf-rpi-zero.git
+  git clone https://github.com/on3ure/hackrf-aprs-direwolf-rpi-zero.git
   sudo mkdir -p /aprs
   sudo cp sdr-1200bps.conf /aprs
   sudo cp aprs.sh /aprs
