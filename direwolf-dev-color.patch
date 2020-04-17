@@ -1,0 +1,14 @@
+--- src/textcolor.c.orig        2020-04-17 16:59:11.419269231 +0100
++++ src/textcolor.c     2020-04-17 16:59:17.189254554 +0100
+@@ -135,9 +135,9 @@
+
+ #define MAX_T 4
+
+-static const char *t_background_white[MAX_T+1] = { "", "\e[48;2;255;255;255m",            "\e[48;2;255;255;255m",                  "\e[5;47m",            "\e[1;47m" };
++static const char *t_background_white[MAX_T+1] = { "", "\e[48;2;0;0;0m",                  "\e[48;2;255;255;255m",                  "\e[5;47m",            "\e[1;47m" };
+
+-static const char *t_black[MAX_T+1]    =       { "", "\e[38;2;0;0;0m",         "\e[0;30m" "\e[48;2;255;255;255m",      "\e[0;30m" "\e[5;47m",  "\e[0;30m" "\e[1;47m" };
++static const char *t_black[MAX_T+1]    =       { "", "\e[38;2;255;255;255m",           "\e[0;30m" "\e[48;2;255;255;255m",      "\e[0;30m" "\e[5;47m",  "\e[0;30m" "\e[1;47m" };
+ static const char *t_red[MAX_T+1]      =       { "", "\e[38;2;255;0;0m",       "\e[1;31m" "\e[48;2;255;255;255m",      "\e[1;31m" "\e[5;47m",  "\e[1;31m" "\e[1;47m" };
+ static const char *t_green[MAX_T+1]    =       { "", "\e[38;2;0;255;0m",       "\e[1;32m" "\e[48;2;255;255;255m",      "\e[1;32m" "\e[5;47m",  "\e[1;32m" "\e[1;47m" };
+ static const char *t_dark_green[MAX_T+1]=      { "", "\e[38;2;0;192;0m",       "\e[0;32m" "\e[48;2;255;255;255m",      "\e[0;32m" "\e[5;47m",  "\e[0;32m" "\e[1;47m" };
