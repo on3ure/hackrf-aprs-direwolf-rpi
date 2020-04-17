@@ -1,9 +1,11 @@
 # HackRF Dire Wolf APRS Raspberry PI Zero #
 
 ### Why ###
-To minimalize antennas and radios ... i'm using a Transverter on my Flex radio to use the 2M band [TR 144 - PRO, Khune](https://shop.kuhne-electronic.com/kuhne/en/shop/converter-transverte/transverter/TR+144++PRO++Transverter/?card=1621)
-This transverter has seperate RX out ... witch is connected to a [AntennaJet AAS300DP](https://www.bonito.net/hamradio/en/bonito-antennajet-aas300-antenna-splitter-for-9khz-300mhz/),
-one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/hackrf/) that was laying arround.
+To minimalize antennas and radios ... i'm using a Transverter on my Flex radio to use the 2M band, a use a [TR 144 - PRO, Khune](https://shop.kuhne-electronic.com/kuhne/en/shop/converter-transverte/transverter/TR+144++PRO++Transverter/?card=1621)
+
+This transverter has seperate RX out ... witch is connected to a [AntennaJet AAS300DP](https://www.bonito.net/hamradio/en/bonito-antennajet-aas300-antenna-splitter-for-9khz-300mhz/), 
+one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/hackrf/) SDR board that was laying arround.
+The SDR Board is connect to a usb/ethernet dongle for the Raspberry PI Zero.
 
 ### Install on Linux - Raspberry PI Zero ... Buster Release (2020) ###
 
@@ -94,5 +96,4 @@ conspy 3
 Press 3 times ESC to exit
 
 ## Notes ##
-Edit aprs.sh .... i use a transverter ... so 28.800 is the transverted frequencie for 144.800, is you want
-to do this directly on a 2m receive antenna ... change this !
+No trasnverter ... change the 28.800 frequency to 144.800 (or whatever your local aprs frequency is) in aprs.sh
