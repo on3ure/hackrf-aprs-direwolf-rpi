@@ -76,7 +76,7 @@ sudo cp aprs.service /lib/systemd/system/
 
 sudo systemctl --system daemon-reload
 
-sudo sytemctl enable aprs
+sudo systemctl enable aprs
 sudo systemctl start aprs
 ```
 
