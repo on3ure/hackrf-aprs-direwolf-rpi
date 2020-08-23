@@ -1,7 +1,7 @@
 # HackRF Dire Wolf APRS Raspberry PI Zero #
 
 ### Why ###
-To minimalize antennas and radios ... i'm using a Transverter on my Flex radio to use the 2M band, a use a [TR 144 - PRO, Khune](https://shop.kuhne-electronic.com/kuhne/en/shop/converter-transverte/transverter/TR+144++PRO++Transverter/?card=1621)
+To minimalize antennas and radios ... i'm using a Transverter on my Flex radio to use the 2M band, i use an [TR 144 - PRO, Khune](https://shop.kuhne-electronic.com/kuhne/en/shop/converter-transverte/transverter/TR+144++PRO++Transverter/?card=1621)
 
 This transverter has seperate RX out ... witch is connected to a [AntennaJet AAS300DP](https://www.bonito.net/hamradio/en/bonito-antennajet-aas300-antenna-splitter-for-9khz-300mhz/), 
 one of these outputs is connected to a [HackRF](https://greatscottgadgets.com/hackrf/) SDR board that was laying arround.
